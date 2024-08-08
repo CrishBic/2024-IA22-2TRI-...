@@ -1,25 +1,80 @@
+# Tutoriais  
+
+## Turma 01
+- Alan 
+  - https://github.com/0Rocha/2024-IA22-2TRI
+- Antony 
+  - https://github.com/GabrielSilva47/2024-IA22-2TRI.git
+- Arthur 
+  - https://github.com/arpbr/2024-IA22-2TRI
+- Carolina 
+  - https://github.com/Carolina-Da-Silva/2024-IA22-2TRI
+- Carolina Crestani 
+  - https://github.com/Kriegs1889/2024-IA22-2TRI
+- Carolina da Silva
+  - https://github.com/Carolina-Da-Silva/2024-IA22-2TRI.git
+- Cristian 
+  - https://github.com/CrishBic/2024-IA22-2TRI-Cristian
+- Edson 
+  - github.com/Edson-Edu
+- Eduardo Minosso 
+  - https://github.com/Eduard0liveira/2024-IA22-2TRI
+- Eduardo proença 
+  - https://github.com/EduardoCruz78/AtividadeProg2
+- Emanuella 
+  - https://github.com/EmanuellaPereira01/Atv2TrimestreManu.git
+- Érick 
+  - https://github.com/Erickkullmann/2024-IA22-2TRI
+- Gabriel 
+  - https://github.com/GabrielRicardo1
+- Hiago de Araújo Pereira
+  - https://github.com/caomuna/2024-IA22-2TRI
+- hugo 
+  - https://github.com/Hou-woo/2024-IA22-2TRI
+- iuri 
+  - https://github.com/iuri2007/2024-IA22-2TRI
+- joão pelegrin 
+  - https://github.com/Joaovitordepelegrin/2024-IA22-2TRi
+
+## Turma 02
+- João gomes 
+  - https://github.com/Gomes047/2024-IA22-2TRI
+- Josué 
+  - https://github.com/Sholipatv
+- Kallebi 
+  - https://github.com/kallebi10 
+- Leticia 
+  - github.com/leh-lima
+- Lucas 
+  - https://github.com/lucasmirandak/2024-IA22-2TRI
+- Marcos Domainski 
+  - https://github.com/domainski2/IAMarcos2024-IA22-2TRI
+- Marcus 
+  - https://github.com/fentanylity/2024-2TRI-IA22
+- Nícolas Ferreira dos Santos
+  - https://github.com/nicolicof/2024-IA22-2TRI
+- Raquel 
+  - https://github.com/raquelgw/2024-IA22-2TRI
+- Rhai 
+  - https://github.com/Rhaiiiii/projeto-IA22.git
+- Roger Alan 
+  - https://github.com/helo-wordd/2024-IA22-2TRI
+- Roger Eduardo 
+  - https://github.com/reczin
+- Ronald 
+  - https://github.com/IARonald/2024-IA22-2TRI
+- Yan 
+  - https://github.com/YanWeberFrancelino/2024-IA22-2TRI
+- Yasmim Rassoul Rebello
+  - https://github.com/YBroflovski/2024-IA22-2TRI-Yasmim
+- Yasmin andrade 
+  - https://github.com/yasandradeRJ/2024-IA22
+
 # Iniciando um projeto Node.js com TypeScript
 
-# 2024-IA22-2TRI
+Crie um diretório para o projeto e acesse-o pelo vscode, abra o terminal e siga os passos abaixo.
 
-### Projeto de esnsino para alunos do primeiro ano
-
-Programação II
-
-Vamos programar nosso primeiro servidor com rotas de URL!! 
-
-# Iniciando um Repositório  no CodeSpace
-Crie um Repositório  com o nome `2024-IA24-'nome do aluno recriando o projeto'`.
-
-Lembrando: O Repositório  deve ser publico e com o arquivo README incluso.
-
-Agora, voce ira clicar no botao `code` e depois em `codespace on main` e espere aparecer a logo do github para continuar os próximos passos. 
-
-# Iniciando um projeto Node.js com TypeScript
-
-No Terminal digite os seguintes comandos, lembre de executar um por vez.
-
-```
+```bash
 npm init -y
 npm install express cors sqlite3 sqlite
 npm install --save-dev typescript nodemon ts-node @types/express @types/cors
@@ -28,16 +83,11 @@ mkdir src
 touch src/app.ts
 ```
 
-# Configurando o ` tsconfig.json ` 
+## Configuranado o `tsconfig.json`
 
-Mude a linha utilizando a barra de pesquisa localizada no centro superior da tela ` "outDir": "./" ` , para 
-` "outDir": "./dist" ` e adicione embaixo a linha ` "rootDir": "./src"`, seu arquivo de configuração do compilador do TypeScript ficará mais ou menos assim.
+Mude a linha ```"outDir": "./",``` para ```"outDir": "./dist",``` e adicione a linha ```"rootDir": "./src",```, seu arquivo de configuração do compilador do TypeScript ficará mais ou menos assim.
 
-Dica: Para encontrar rapidamente: `Control + F` e coloque `outDir`.
-
-Lembrando: cuidado com as `""`  para nao ter nenhum erro.
-
-```javascript
+```json
 {
   "compilerOptions": {
     "target": "ES2017",
@@ -50,29 +100,21 @@ Lembrando: cuidado com as `""`  para nao ter nenhum erro.
     "forceConsistentCasingInFileNames": true
   }
 }
-```` 
-# Configurando o `package.jon`
+```
 
-Adicione o seguinte dentro de script(**Que voce pode encontar utilizando Control+F**) no seu package.json
+## Configurando o `package.json`
 
-Cuidado para nao adicionar ao arquivo `package-lock-json`
+Adicione o seguinte script ao seu `package.json`
 
-Na linha seguinte estará escrito o seguinte:
-```javascript
- "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-  },
-````
-Adicione o seguinte na linha abaixo do `"test": [...]`:
+```json
+"scripts": {
+  "dev": "nodemon src/app.ts"
+}
+```
 
-```javascript
-  "dev": "npx nodemon src/app.ts"
-```` 
- 
-# Criando arquivo inicial do servidor
-No arquivo app.ts (que esta dentro da `pasta src` ) adicione: 
+## Criando arquivo inicial do servidor
 
-```javascript
+```typescript
 import express from 'express';
 import cors from 'cors';
 
@@ -89,27 +131,26 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-```` 
+```
 
-# Iniciando o Servidor
-Para iniciar, você  devera instalar a biblioteca **REST Client**, para fazer isso clique no icone que parece um cubo que esta sendo desmontado e pesquise `REST client` e clique em instalar. Aguarde a instalaçao para seguir o proximo passo.
+## Inicializando o servidor
 
-Agora para ver sua pagina, digite o seguinte comando no Terminal.
-
-```javascript
+```bash
 npm run dev
-```` 
-Se tudo ocorrer bem, você  verá a mensagem Server running on port 3333 no terminal.
+```
 
-Apos executar o comando anterior, aparecera uma opção de execução e você  devera clicar no botao `Abrir no navegador`.
-E você  vera a mensagem `Hello World`
+Se tudo ocorrer bem, você verá a mensagem `Server running on port 3333` no terminal.
 
+## Testando o servidor
 
-# Configurando Banco de dados
+Abra o navegador e acesse `http://localhost:3333`, você verá a mensagem `Hello World`.
+
+## Configurando o banco de dados
+
 Crie um arquivo `database.ts` dentro da pasta `src` e adicione o seguinte código.
 
-```javascript
-import { Database, open } from 'sqlite';
+```typescript
+import { open, Database } from 'sqlite';
 import sqlite3 from 'sqlite3';
 
 let instance: Database | null = null;
@@ -133,11 +174,11 @@ export async function connect() {
   instance = db;
   return db;
 }
-```` 
-# Adicionando o banco de dados
-No antigo arquivo `app.ts` troque **todo** o codigo por este
+```
 
-```javascript
+## Adicionando o banco de dados ao servidor
+
+```typescript
 import express from 'express';
 import cors from 'cors';
 import { connect } from './database';
@@ -160,132 +201,52 @@ app.post('/users', async (req, res) => {
   const user = await db.get('SELECT * FROM users WHERE id = ?', [result.lastID]);
 
   res.json(user);
-});
-
-app.get('/users', async (req, res) => {
-  const db = await connect();
-  const users = await db.all('SELECT * FROM users');
-
-  res.json(users);
 });
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-````
-# Testando a inserção de dados
+```
 
-Crie um arquivo chamada `teste.http` **fora da pasta src** e adicione o seguinte codigo
+## Testando a inserção de dados
 
-```javascript
-POST (>>>>>>>>>>SEU LINK /users<<<<<<<<<<) HTTP/1.1
-Content-Type: application/json
-Authorization: token xxx
+Abra o Postman e faça uma requisição POST para `http://localhost:3333/users` com o seguinte corpo.
 
+```json
 {
   "name": "John Doe",
-  "email": "john@example.com"
+  "email": "johndoe@mail.com"
 }
+```
 
-````
-Ao lado de `terminal` terá a opção portas (tambem pode estar dentro dos 3 pontinhos :))
+Se tudo ocorrer bem, você verá a resposta com o usuário inserido.
 
-Clique em `Portas` e aparecera a sua porta, com o endereco e a visibilidade.
-
-Com o ponteiro do mouse encima do numero da porta(3333), clique com o botao direito e encontre a opção `Visibilidade da porta`. Troque de **Private** para **Public**
-
-Agora clique no link (Endereço Encaminhado) e o copie. Após copiado, substitua no codigo anterior onde esta escrito **>SEU LINK<**
-
-No final do seu link, lembre de manter no final `/users`.
-
-Seu codigo ficara mais ou menos assim
-
-````javascript
-POST https://meusite/users HTTP/1.1
-Content-Type: application/json
-Authorization: token xxx
-
-{
-  "name": "John Doe",
-  "email": "john@example.com"
-}
-
-````
-Agora, clique na opção **'Send Request'** que aparecera encima da primeira linha em **Post**.
-
-Se tudo ocorreu bem, voce abrira o link da primeira linha e aparecera o seguinte resultado
-
-````javascript
+```json
 {
   "id": 1,
   "name": "John Doe",
-  "email": "
+  "email": "johndoe@mail.com"
 }
-````
-## Vamos aprendar mais um pouco de bd!
+```
 
-Alem da requisição Post ( que envia os dados para o servidor) tambem temos o Update( que atualiza os dados) e Delete ( que apaga os dados).
+## Listando os usuários
 
-# Atualize ``teste.http``
-Ele ficará assim
+Adicione a rota `/users` ao servidor.
 
-```javascript
-POST (>>>>>>>>>>SEU LINK /users<<<<<<<<<<) HTTP/1.1
-Content-Type: application/json
-Authorization: token xxx
-
-{
-  "name": "John Doe",
-  "email": "john@example.com"
-}
-####
-
-PUT  (>>>>>>>>>>SEU LINK /users/1<<<<<<<<<<) HTTP/1.1
-Content-Type: application/json
-
-{
-  "name": "John Doe update",
-  "email": "john@example.com"
-}
-
-####
-
-DELETE  (>>>>>>>>>>SEU LINK /users/1<<<<<<<<<<) HTTP/1.1
-
-```` 
-Tambem alteraremos ``app.ts``
-```javascript
-import express from 'express';
-import cors from 'cors';
-import { connect } from './database';
-
-const port = 3333;
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
-
-app.post('/users', async (req, res) => {
-  const db = await connect();
-  const { name, email } = req.body;
-
-  const result = await db.run('INSERT INTO users (name, email) VALUES (?, ?)', [name, email]);
-  const user = await db.get('SELECT * FROM users WHERE id = ?', [result.lastID]);
-
-  res.json(user);
-});
-
+```typescript
 app.get('/users', async (req, res) => {
   const db = await connect();
   const users = await db.all('SELECT * FROM users');
 
   res.json(users);
 });
+```
 
+## Editando um usuário
+
+Adicione a rota `/users/:id` ao servidor.
+
+```typescript
 app.put('/users/:id', async (req, res) => {
   const db = await connect();
   const { name, email } = req.body;
@@ -296,7 +257,13 @@ app.put('/users/:id', async (req, res) => {
 
   res.json(user);
 });
+```
 
+## Deletando um usuário
+
+Adicione a rota `/users/:id` ao servidor.
+
+```typescript
 app.delete('/users/:id', async (req, res) => {
   const db = await connect();
   const { id } = req.params;
@@ -305,15 +272,4 @@ app.delete('/users/:id', async (req, res) => {
 
   res.json({ message: 'User deleted' });
 });
-
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
-```` 
-## Titulo
-
-- Lista1
-- Lista2
-```javascript
-const oi = 0102
-```` 
+```
