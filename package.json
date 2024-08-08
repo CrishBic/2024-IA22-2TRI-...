@@ -1,6 +1,12 @@
 {
+<<<<<<< HEAD
   "name": "2024-ia22-2tri",
   "version": "1.0.0",
+=======
+  "name": "2024-ia22-2tri-cristian",
+  "version": "1.0.0",
+  "description": "# 2024-IA22-2TRI",
+>>>>>>> dcdbc44 (...)
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +15,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
   "description": "",
+=======
+>>>>>>> dcdbc44 (...)
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",

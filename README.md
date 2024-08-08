@@ -85,7 +85,12 @@ touch src/app.ts
 
 ## Configuranado o `tsconfig.json`
 
+<<<<<<< HEAD
 Mude a linha ```"outDir": "./",``` para ```"outDir": "./dist",``` e adicione a linha ```"rootDir": "./src",```, seu arquivo de configuração do compilador do TypeScript ficará mais ou menos assim.
+=======
+Mude a linha utilizando a barra de pesquisa localizada no centro superior da tela ` "outDir": "./" ` , para 
+` "outDir": "./dist" ` e adicione embaixo na linha ` "rootDir": "./"` e coloque ` "rootDir": "./src"`, seu arquivo de configuração do compilador do TypeScript ficará mais ou menos assim.
+>>>>>>> dcdbc44 (...)
 
 ```json
 {
@@ -100,17 +105,34 @@ Mude a linha ```"outDir": "./",``` para ```"outDir": "./dist",``` e adicione a l
     "forceConsistentCasingInFileNames": true
   }
 }
+<<<<<<< HEAD
 ```
+=======
+```` 
+# Configurando o `package.json`
+>>>>>>> dcdbc44 (...)
 
 ## Configurando o `package.json`
 
 Adicione o seguinte script ao seu `package.json`
 
+<<<<<<< HEAD
 ```json
 "scripts": {
   "dev": "nodemon src/app.ts"
 }
 ```
+=======
+Na linha seguinte estará escrito o seguinte:
+```javascript
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+````
+Não esqueça a vírgula ao lado do `"test": "echo \"Error: no test specified\" && exit 1"`
+
+Adicione o seguinte na linha abaixo do `"test": [...]`:
+>>>>>>> dcdbc44 (...)
 
 ## Criando arquivo inicial do servidor
 
@@ -231,7 +253,62 @@ Se tudo ocorrer bem, você verá a resposta com o usuário inserido.
 
 ## Listando os usuários
 
+<<<<<<< HEAD
 Adicione a rota `/users` ao servidor.
+=======
+# Atualize ``teste.http``
+Ele ficará assim
+
+```javascript
+POST https://localhost:3333/users HTTP/1.1
+Content-Type: application/json
+Authorization: token xxx
+
+{
+  "name": "John Doe",
+  "email": "john@example.com"
+}
+####
+
+PUT https://localhost:3333/users/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "John Doe update",
+  "email": "john@example.com"
+}
+
+####
+
+DELETE https://localhost:3333/users/1 HTTP/1.1
+
+```` 
+Tambem alteraremos ``app.ts``
+```javascript
+import express from 'express';
+import cors from 'cors';
+import { connect } from './database';
+
+const port = 3333;
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
+app.post('/users', async (req, res) => {
+  const db = await connect();
+  const { name, email } = req.body;
+
+  const result = await db.run('INSERT INTO users (name, email) VALUES (?, ?)', [name, email]);
+  const user = await db.get('SELECT * FROM users WHERE id = ?', [result.lastID]);
+
+  res.json(user);
+});
+>>>>>>> dcdbc44 (...)
 
 ```typescript
 app.get('/users', async (req, res) => {
